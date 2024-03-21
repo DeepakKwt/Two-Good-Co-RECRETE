@@ -1,0 +1,728 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Futura', sans-serif;
+}
+
+#cursor {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: rgb(196, 152, 238);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#main {
+    width: 100%;
+    padding: 0 2vw;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+    padding: 15px 25px;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+
+.nav .navleft {
+    height: 80px;
+    overflow: hidden;
+}
+
+.nav .navleft svg {
+    display: block;
+}
+
+.nav .navright {
+    display: flex;
+    align-items: center;
+}
+
+.nav .navright a {
+    font-size: 12px;
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav .navright a i {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.nav .navright .icon {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.page1 {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 36vh;
+}
+
+.page1 h1 {
+    font-size: 14.9vw;
+    text-transform: uppercase;
+    line-height: .9;
+}
+
+.image-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    scale: 1.2;
+}
+
+.page2 {
+    width: 100%;
+    height: 150vh;
+}
+
+.txt-cont {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.txt-cont h2 {
+    font-size: 4vw;
+}
+
+.txt-cont a {
+    text-decoration: none;
+    font-size: 0.8vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.566);
+    padding: .5vw 0;
+    border-bottom: 1px solid black;
+}
+
+.text-good {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+.text-good p {
+    font-size: .9vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.elem-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page2 .elem {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.page2 .elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.2;
+}
+
+.card {
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #F5DFCF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+    z-index: 999;
+}
+
+.card:hover {
+    height: 300px;
+}
+
+.card .txt-elem {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+}
+
+.card .txt-elem .dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.card .txt-elem h6 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.card .txt-elem .firsth6 {
+    font-weight: 100
+}
+
+.card .txt-elem i {
+    font-size: 25px;
+}
+
+.card .img-section {
+    width: 100%;
+    height: 200px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .img-section img {
+    display: none;
+    width: 120px;
+    height: 120px;
+    transition: all ease-in-out .5s;
+}
+
+.card:hover .img-section img {
+    display: block;
+}
+
+.desc {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+
+.descleft {
+    width: 50%;
+    height: 100%;
+}
+
+.descleft h1 {
+    font-size: 3.5vw;
+}
+
+.descright {
+    width: 25%;
+    height: 100%;
+}
+
+.descright p {
+    font-family: sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 30px;
+}
+
+.descright a {
+    font-size: 1vw;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.procuct-page {
+    width: 100%;
+    height: 220vh;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.pages {
+    width: 48%;
+    height: 100%;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.img-cont {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.img-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pages p {
+    font-size: 1vw;
+    font-family: sans-serif;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.message-container {
+    width: 100%;
+    height: 200vh;
+    padding: 20px;
+}
+
+.message-container .msg-btn-container {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px
+}
+
+.msg-btn-container .msg-btn {
+    width: 200px;
+    height: 100%;
+    padding: 10px;
+}
+
+.msg-btn-container .msg-btn .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.msg-btn-container .msg-btn h5 {
+    font-size: 25px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.msg-btn:hover h5 {
+    opacity: 0.8
+}
+
+.message-container h1 {
+    font-size: 5vw;
+    text-align: center;
+    width: 85%;
+    line-height: 1;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 80px;
+}
+
+.send-msg-container {
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 100px;
+}
+
+.send-message {
+    width: 300px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-container p {
+    font-size: 1vw;
+    text-align: center;
+    width: 300px;
+    font-family: sans-serif;
+    margin-top: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.work-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-section .txt-section {
+    width: 25%;
+    height: 100%;
+}
+
+.work-section .txt-section p {
+    font-size: 1.2vw;
+    font-family: sans-serif;
+    margin: 20px 0;
+}
+
+.work-section .txt-section a {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 1vw;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.work-section .image-section {
+    width: 68%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.work-section .image-section .image-container {
+    width: 48%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.work-section .image-section img {
+    scale: 1.1;
+}
+
+.email-section {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid black;
+    margin-bottom: 100px;
+}
+
+.email-section h1 {
+    position: absolute;
+    display: block;
+    font-size: 3vw;
+    margin-left: 20px;
+}
+
+.email-section i {
+    font-size: 40px;
+}
+
+.email-section input {
+    width: 85%;
+    height: 90%;
+    border: none;
+    outline: none;
+    font-size: 3vw;
+    padding: 0 10px;
+}
+
+.footer {
+    width: 100%;
+    height: 110vh;
+    font-family: sans-serif;
+}
+
+.footer-top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative
+}
+
+.footer-top .footer-text h3 {
+    font-size: 1vw;
+    opacity: .5;
+}
+
+.footer-top .footer-text ul {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 1.1vw;
+}
+
+.footer-top .footer-text ul li {
+    margin-top: 5px;
+}
+
+.footer-top .footer-text:last-child {
+    text-align: right;
+}
+
+.footer img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    mix-blend-mode: color-burn;
+}
+
+.footer-bottom {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.footer-bottom .terms {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: .5;
+}
+
+.footer-bottom p {
+    text-align: center;
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 200px
+}
+
+@media (max-width: 600px) {
+    #main {
+        padding: 30px;
+    }
+    .nav .navright .links {
+        display: none;
+    }
+    .page1 {
+        width: 100%;
+        min-height: 70vh;
+        padding-top: 30vh;
+    }
+    .page1 h1 {
+        font-size: 14.6vw;
+        letter-spacing: -4px;
+        line-height: .9;
+    }
+    .image-container {
+        height: 60vh;
+        padding: 2vw;
+        margin: 50px;
+    }
+    .image-container img {
+        width: 100%;
+        height: 70%;
+    }
+    .txt-cont {
+        width: 100%;
+        height: 40vh;
+        flex-direction: column;
+    }
+    .txt-cont h2 {
+        width: 70vw;
+        font-size: 7vw;
+    }
+    .txt-cont a {
+        width: 50%;
+        font-size: 2vw;
+    }
+    .text-good p {
+        font-size: 2vw;
+    }
+    .page2 {
+        height: 350vh;
+    }
+    .elem-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        overflow: hidden;
+    }
+    .page2 .elem {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .desc {
+        flex-direction: column;
+        justify-content: baseline;
+        height: 80vh;
+    }
+    .descleft {
+        width: 100%;
+        height: 45%;
+        text-align: center;
+        margin: 30px;
+    }
+    .descleft h1 {
+        font-size: 6vw;
+    }
+    .descright {
+        width: 100%;
+        height: 45%;
+        text-align: center;
+    }
+    .descright p {
+        font-size: 3vw;
+        margin: 0;
+    }
+    .descright a {
+        font-size: 2vw;
+    }
+    .procuct-page {
+        height: 100vh;
+    }
+    .page {
+        height: 45vh;
+    }
+    .pages {
+        width: 48%;
+        height: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    .img-cont {
+        height: 80%;
+    }
+    .pages p {
+        font-size: 1.8vw;
+        font-family: sans-serif;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    .message-container {
+        height: 150vh;
+    }
+    .msg-btn-container .msg-btn .checkbox {
+        width: 15px;
+        height: 15px;
+    }
+    .msg-btn-container .msg-btn h5 {
+        font-size: 3vw;
+    }
+    .message-container h1 {
+        font-size: 6vw;
+    }
+    .message-container p {
+        font-size: 2.5vw;
+    }
+    .work-section {
+        height: 120vh;
+        flex-direction: column;
+    }
+    .work-section .txt-section {
+        width: 100%;
+        height: 35%;
+    }
+    .work-section .txt-section p {
+        font-size: 2.5vw;
+    }
+    .work-section .txt-section a {
+        font-size: 2vw;
+    }
+    .work-section .image-section {
+        width: 100%;
+        height: 50%;
+    }
+    .work-section .image-section .image-container {
+        width: 48%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .email-section h1 {
+        margin-left: 10px;
+    }
+    .email-section i {
+        font-size: 20px;
+    }
+    .email-section input {
+        height: 60%;
+    }
+    .footer-top .footer-text h3 {
+        font-size: 2vw;
+        margin-top: 30px;
+    }
+    .footer-top .footer-text ul {
+        font-size: 2vw;
+        text-align: left;
+    }
+    .footer img {
+        top: 0;
+        left: 8%;
+        width: 80px;
+    }
+    .footer-bottom .terms {
+        bottom: 20px;
+        width: 100%
+    }
+    .footer-bottom p {
+        text-align: left;
+        width: 100%;
+        margin-top: 0;
+        font-size: 2.5vw;
+    }
+}
